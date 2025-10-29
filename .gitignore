@@ -1,0 +1,12 @@
+# Carpetas del IDE
+AppProyectoMulta/.vs/
+*.user
+*.suo
+
+# Compilados
+bin/
+obj/
+
+# Archivos temporales
+*.log
+*.tmp
