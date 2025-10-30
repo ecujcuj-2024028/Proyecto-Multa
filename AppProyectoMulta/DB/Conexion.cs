@@ -1,20 +1,22 @@
 ﻿using MySql.Data.MySqlClient;
+using System;
 
 namespace AppProyectoMulta.DB
 {
     public class ConexionDB
     {
         private static ConexionDB instancia = null;
-
-        private string cadenaConexion;
+        private readonly string cadenaConexion;
 
         private ConexionDB()
         {
-            cadenaConexion = "Server=btyfbw2rzcqmdrin7lya-mysql.services.clever-cloud.com;" +
-                           "Port=3306;" +
-                           "Database=btyfbw2rzcqmdrin7lya;" +
-                           "Uid=uevtlvk5entsmipn;Pwd=5UEOoD9wBWlNA4122KSJ;" +
-                           "CharSet=utf8mb4;SslMode=Preferred;";
+            string host = Environment.GetEnvironmentVariable("MYSQL_ADDON_HOST");
+            string db = Environment.GetEnvironmentVariable("MYSQL_ADDON_DB");
+            string user = Environment.GetEnvironmentVariable("MYSQL_ADDON_USER");
+            string pass = Environment.GetEnvironmentVariable("MYSQL_ADDON_PASSWORD");
+            string port = Environment.GetEnvironmentVariable("MYSQL_ADDON_PORT");
+
+            cadenaConexion = $"Server={host};Port={port};Database={db};Uid={user};Pwd={pass};SslMode=Required;";
         }
 
         public static ConexionDB Instancia
@@ -22,9 +24,7 @@ namespace AppProyectoMulta.DB
             get
             {
                 if (instancia == null)
-                {
                     instancia = new ConexionDB();
-                }
                 return instancia;
             }
         }
