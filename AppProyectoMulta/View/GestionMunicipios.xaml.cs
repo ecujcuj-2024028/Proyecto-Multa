@@ -132,5 +132,10 @@ namespace AppProyectoMulta.View
         {
             CargarMunicipios();
         }
+
+        private void txtBuscarId_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

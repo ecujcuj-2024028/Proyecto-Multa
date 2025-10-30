@@ -37,7 +37,10 @@ namespace AppProyectoMulta
 
         private void Dueños_Click(object sender, RoutedEventArgs e)
         {
+            GestionDueño ventanaDueño = new GestionDueño();
 
+            ventanaDueño.Show();
+            this.Close();
         }
 
         private void Vehiculos_Click(object sender, RoutedEventArgs e)
