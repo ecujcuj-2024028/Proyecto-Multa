@@ -2,6 +2,7 @@
 AppProyectoMulta/.vs/
 *.user
 *.suo
+.vs
 
 # Compilados
 bin/

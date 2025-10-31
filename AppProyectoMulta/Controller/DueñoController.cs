@@ -44,7 +44,8 @@ namespace AppProyectoMulta.Controllers
             return lista;
         }
 
-        public bool AgregarDueño(string nombre, string direccion, string telefono, string correo)
+        public bool AgregarDueño(string nombre, string direccion,
+            string telefono, string correo)
         {
             using (MySqlConnection conn = ConexionDB.Instancia.CrearConexion())
             {
@@ -69,7 +70,8 @@ namespace AppProyectoMulta.Controllers
             }
         }
 
-        public bool ActualizarDueño(int id, string nombre, string direccion, string telefono, string correo)
+        public bool ActualizarDueño(int id, string nombre, string direccion,
+            string telefono, string correo)
         {
             using (MySqlConnection conn = ConexionDB.Instancia.CrearConexion())
             {
