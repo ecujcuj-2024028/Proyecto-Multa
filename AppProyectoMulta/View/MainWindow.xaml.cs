@@ -45,7 +45,9 @@ namespace AppProyectoMulta
 
         private void Vehiculos_Click(object sender, RoutedEventArgs e)
         {
-
+            GestionVehiculo ventanaVehiculo = new GestionVehiculo();
+            ventanaVehiculo.Show();
+            this.Close();
         }
 
         private void Agentes_Click(object sender, RoutedEventArgs e)
