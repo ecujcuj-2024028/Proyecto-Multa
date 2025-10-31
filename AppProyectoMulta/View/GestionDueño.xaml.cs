@@ -59,8 +59,8 @@ namespace AppProyectoMulta.View
                 else
                 {
                     int id = Convert.ToInt32(txtId.Text);
-                    controller.ActualizarDueño(id, txtId.Text, txtDireccion.Text, txtTelefono.Text, txtCorreo.Text);
-                    MessageBox.Show("Municipio actualizado con éxito.");
+                    controller.ActualizarDueño(id, txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtCorreo.Text);
+                    MessageBox.Show("Dueño actualizado con éxito.");
                 }
                 CargaDueño();
                 BtnNuevo_Click(null, null);
@@ -128,7 +128,7 @@ namespace AppProyectoMulta.View
 
             if (resultado.Count == 0) 
             {
-                MessageBox.Show("No se encontró ningún municipio con ese ID.", "Búsqueda sin Resultado");
+                MessageBox.Show("No se encontró ningún Dueño con ese ID.", "Búsqueda sin Resultado");
             }
         }
 
