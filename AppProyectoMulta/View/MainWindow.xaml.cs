@@ -52,7 +52,9 @@ namespace AppProyectoMulta
 
         private void Agentes_Click(object sender, RoutedEventArgs e)
         {
-
+            GestionAgente ventanaAgente = new GestionAgente();
+            ventanaAgente.Show();
+            this.Close();
         }
 
         private void TiposMulta_Click(object sender, RoutedEventArgs e)
