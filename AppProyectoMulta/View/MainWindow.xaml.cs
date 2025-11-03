@@ -59,7 +59,9 @@ namespace AppProyectoMulta
 
         private void TiposMulta_Click(object sender, RoutedEventArgs e)
         {
-
+            GestionTipoMulta ventanaTipoMulta = new GestionTipoMulta();
+            ventanaTipoMulta.Show();
+            this.Close();
         }
 
         private void Pagos_Click(object sender, RoutedEventArgs e)
