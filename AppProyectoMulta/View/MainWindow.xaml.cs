@@ -12,9 +12,6 @@ using System.Windows.Shapes;
 
 namespace AppProyectoMulta
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -68,7 +65,9 @@ namespace AppProyectoMulta
 
         private void Pagos_Click(object sender, RoutedEventArgs e)
         {
-
+            GestionPagoMulta ventanaPago = new GestionPagoMulta();
+            ventanaPago.Show();
+            this.Close();
         }
     }
 }
