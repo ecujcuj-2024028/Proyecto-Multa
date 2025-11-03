@@ -40,10 +40,10 @@ namespace AppProyectoMulta.View
         }
         private void BtnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNombre.Text) || 
+            if (string.IsNullOrEmpty(txtNombre.Text) ||
                 string.IsNullOrEmpty(txtDireccion.Text) ||
                 string.IsNullOrEmpty(txtCorreo.Text) ||
-                string.IsNullOrEmpty(txtTelefono.Text)) 
+                string.IsNullOrEmpty(txtTelefono.Text))
             {
                 MessageBox.Show("Ningun campo puede estar vacío.");
                 return;
@@ -73,7 +73,7 @@ namespace AppProyectoMulta.View
 
         private void BtnEliminar_Click(object sender, RoutedEventArgs e)
         {
-            if(dataGridDueños.SelectedItem == null)
+            if (dataGridDueños.SelectedItem == null)
             {
                 MessageBox.Show("Debe de seleccionar un Dueño para eliminar.");
                 return;
@@ -85,7 +85,7 @@ namespace AppProyectoMulta.View
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Warning);
 
-            if (resultado == MessageBoxResult.Yes) 
+            if (resultado == MessageBoxResult.Yes)
             {
                 try
                 {
@@ -112,12 +112,12 @@ namespace AppProyectoMulta.View
                 txtCorreo.Text = dueño.Correo;
                 txtTelefono.Text = dueño.Telefono;
             }
-            
+
         }
 
         private void BtnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(txtBuscarId.Text) || !int.TryParse(txtBuscarId.Text, out int id))
+            if (string.IsNullOrWhiteSpace(txtBuscarId.Text) || !int.TryParse(txtBuscarId.Text, out int id))
             {
                 MessageBox.Show("Por favor, ingrese un ID numérico válido para buscar.", "Error de Búsqueda");
                 return;
@@ -126,7 +126,7 @@ namespace AppProyectoMulta.View
 
             dataGridDueños.ItemsSource = resultado;
 
-            if (resultado.Count == 0) 
+            if (resultado.Count == 0)
             {
                 MessageBox.Show("No se encontró ningún Dueño con ese ID.", "Búsqueda sin Resultado");
             }

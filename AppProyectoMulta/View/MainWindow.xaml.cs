@@ -24,7 +24,9 @@ namespace AppProyectoMulta
 
         private void Multas_Click(object sender, RoutedEventArgs e)
         {
-
+            GestionMulta ventanaMulta = new GestionMulta();
+            ventanaMulta.Show();
+            this.Close();
         }
 
         private void Municipios_Click(object sender, RoutedEventArgs e)
