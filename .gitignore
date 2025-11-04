@@ -1,0 +1,19 @@
+# Carpetas del IDE
+AppProyectoMulta/.vs/
+*.user
+*.suo
+.vs/
+
+# Compilados
+bin/
+obj/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Archivos de configuracion
+.env
+
+# Configuraciones específicas del proyecto
+AppProyectoMulta/Properties/launchSettings.json
